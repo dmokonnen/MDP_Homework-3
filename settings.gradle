@@ -1,0 +1,3 @@
+rootProject.name='Homework4'
+include ':TableLayoutTest'
+include ':walmartstore'
