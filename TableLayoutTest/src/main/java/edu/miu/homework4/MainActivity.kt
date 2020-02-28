@@ -1,14 +1,14 @@
 package edu.miu.homework4
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.view.ViewGroup
 import android.widget.TableRow
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.setPadding
 import androidx.core.view.size
-import edu.miu.homework4.R.*
+import edu.miu.homework4.R.color
+import edu.miu.homework4.R.layout
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(layout.activity_main)
     }
-
     fun addToTable(view: View) {
         val i=tableLayout.size
         val row=TableRow(this)
