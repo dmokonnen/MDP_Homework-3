@@ -1,18 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:hint="Enter Android Version"
+        android:id="@+id/etV"
+         />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Android Code name"
+        android:id="@+id/etCN"
+         />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:onClick="addToTable"
+        android:id="@+id/addButton"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableLayout"
+        android:stretchColumns="0,1">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TableRow
+            android:padding="2dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:background="@color/tableBackground"
+                android:padding="4dp"
+
+                android:text="Version "/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:background="@color/tableBackground"
+                android:text="Code Name"/>
+        </TableRow>
+        <TableRow android:padding="2dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:background="@color/tableBackground"
+                android:text="Android 9.0 "/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:background="@color/tableBackground"
+                android:text="Pie"/>
+        </TableRow>
+        <TableRow android:padding="2dp">
+            <TextView
+                android:layout_height="wrap_content"
+                android:background="@color/tableBackground"
+                android:text="Android 8.0 "/>
+            <TextView
+                android:layout_height="wrap_content"
+                android:background="@color/tableBackground"
+                android:text="Oreo"/>
+        </TableRow>
+    </TableLayout>
+
+
+</LinearLayout>
